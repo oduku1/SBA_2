@@ -16,15 +16,13 @@ Example:
 const CourseInfo = {
   id: 451,
   name: "Introduction to JavaScript"
-};
-2. AssignmentGroup
+};```
+
+2. `AssignmentGroup`
 Represents a group of assignments within a course, including their due dates and points possible.
 Example:
 
-js
-Always show details
-
-Copy code
+```js
 const AssignmentGroup = {
   id: 12345,
   name: "Fundamentals of JavaScript",
@@ -36,6 +34,8 @@ const AssignmentGroup = {
     // ...
   ]
 };
+
+```
 3. LearnerSubmissions
 Represents actual submissions from learners for specific assignments.
 Each entry contains:
@@ -52,10 +52,8 @@ score (numeric score earned)
 
 Example:
 
-js
-Always show details
+```js
 
-Copy code
 const LearnerSubmissions = [
   {
     learner_id: 125,
@@ -67,4 +65,4 @@ const LearnerSubmissions = [
     assignment_id: 2,
     submission: { submitted_at: "2023-02-28", score: 120 }
   }
-];
+];```
