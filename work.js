@@ -182,12 +182,11 @@ console.log(submission_210);
     let results = []; // array to store each object into 
 
     for (let learner of uniqueLearners) {
-        let single_learner = {id: learner };
+        const single_learner = {id: learner };
         let learner_submissions = submission.filter(s => s.learner_id === learner); // gives an array of submissions by that learner
 
         let totalScore = 0;
         let totalPoints = 0;
-
         try {
             for (let submitted of learner_submissions) {
                 let assignment = group.assignments.find(a => a.id === submitted.assignment_id); //this finds assignments that correlates to the submitted assignment through each iteration of the loop.
@@ -215,8 +214,11 @@ console.log(submission_210);
                 }
             }
 
-            single_learner.avg = totalPoints > 0 ? totalScore / totalPoints : 0; //
+            single_learner.avg = totalPoints > 0 ? totalScore / totalPoints : 0;
+
+
             results.push(single_learner); //adds the object to the array
+          
         } catch {
             console.log("Something is wrong with the data, please fix problem and try again");
         }
@@ -226,3 +228,6 @@ console.log(submission_210);
 }
 
 console.log(getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions))
+
+
+
